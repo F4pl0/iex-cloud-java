@@ -108,9 +108,6 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
-                        <configuration>
-                            <classifier>javadocs</classifier>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
