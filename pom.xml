@@ -4,7 +4,7 @@
 
     <groupId>io.github.f4pl0</groupId>
     <artifactId>iex-cloud</artifactId>
-    <version>1.4-SNAPSHOT</version>
+    <version>1.5-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>IEX Cloud</name>
     <description>Java wrapper for IEX Cloud API</description>
