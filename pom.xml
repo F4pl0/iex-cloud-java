@@ -92,7 +92,7 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
-                        <phase>deploy</phase>
+                        <phase>package</phase>
                     </execution>
                 </executions>
             </plugin>
