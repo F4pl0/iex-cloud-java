@@ -51,6 +51,7 @@ jobs:
       - name: Release With Maven
         run: |
           mvn -B -U \
+            -X \
             -Pci-cd \
             release:prepare \
             release:perform \
