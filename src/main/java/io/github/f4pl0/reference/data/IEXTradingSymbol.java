@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-/**
- * Represents a symbol reference data.
- */
 public class IEXTradingSymbol {
     /**
      * Refers to the symbol represented in Nasdaq Integrated symbology (INET).

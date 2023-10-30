@@ -1,21 +1,31 @@
 package io.github.f4pl0;
 
+import io.github.f4pl0.config.ConfigInjector;
+import io.github.f4pl0.config.IEXCloudConfig;
 import io.github.f4pl0.equitiesmarketdata.EquitiesMarketData;
 import io.github.f4pl0.reference.Reference;
 
+/**
+ * The IEXCloudClient is the main entry point for the IEX Cloud API.
+ * You will need to set the publishable token before building the client.
+ */
 public class IEXCloudClient {
     public final EquitiesMarketData equitiesMarketData;
     public final Reference reference;
 
+    /**
+     * Create a new IEXCloudClient.
+     * @param config
+     */
     private IEXCloudClient(IEXCloudConfig config) {
-
-        equitiesMarketData = new EquitiesMarketData(config);
-        reference = new Reference(config);
+        ConfigInjector.injectIEXConfiguration(IEXHttpClient.getInstance(), config);
+        equitiesMarketData = new EquitiesMarketData();
+        reference = new Reference();
     }
 
     /**
      * Builder for the IEXCloudClient.
-     * You will need to set the publishable and secret tokens before building the client.
+     * You will need to set the publishable token before building the client.
      */
     public static class IEXCloudClientBuilder {
         private String publishableToken;
