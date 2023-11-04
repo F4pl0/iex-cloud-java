@@ -4,6 +4,7 @@ import io.github.f4pl0.companydata.CompanyData;
 import io.github.f4pl0.config.ConfigInjector;
 import io.github.f4pl0.config.IEXCloudConfig;
 import io.github.f4pl0.equitiesmarketdata.EquitiesMarketData;
+import io.github.f4pl0.historicaldata.HistoricalData;
 import io.github.f4pl0.reference.Reference;
 
 /**
@@ -14,6 +15,7 @@ public class IEXCloudClient {
     public final EquitiesMarketData equitiesMarketData;
     public final Reference reference;
     public final CompanyData companyData;
+    public final HistoricalData historicalData;
 
     /**
      * Create a new IEXCloudClient.
@@ -24,6 +26,7 @@ public class IEXCloudClient {
         equitiesMarketData = new EquitiesMarketData();
         reference = new Reference();
         companyData = new CompanyData();
+        historicalData = new HistoricalData();
     }
 
     /**
