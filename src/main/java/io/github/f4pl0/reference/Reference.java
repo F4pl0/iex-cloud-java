@@ -147,7 +147,7 @@ public class Reference {
      *
      * @see <a href="https://iexcloud.io/docs/core/REF_DATA_OPTIONS#options-reference-data">IEX Cloud API</a>
      * @return A Map of String keys and List of Date values.
-     * @throws IOException
+     * @throws IOException If the request fails.
      */
     public Map<String, List<Date>> optionsReferenceData() throws IOException {
         CloseableHttpResponse response = httpClient.execute("/data/core/ref_data_options");
@@ -190,7 +190,7 @@ public class Reference {
      * @see <a href="https://iexcloud.io/docs/core/REF_DATA_OPTIONS#options-reference-data">IEX Cloud API</a>
      * @param underlying The underlying symbol of the options.
      * @return A List of Options for the given underlying symbols.
-     * @throws IOException
+     * @throws IOException If the request fails.
      */
     public List<IEXOption> optionsReferenceData(@NonNull String underlying) throws IOException {
         String encodedUnderlying = URLEncoder.encode(underlying, StandardCharsets.UTF_8);
@@ -213,7 +213,7 @@ public class Reference {
      * @param underlying The underlying symbol of the options.
      * @param expirationDate The expiration date of the options.
      * @return A List of Options for the given underlying symbol with the given expiration date.
-     * @throws IOException
+     * @throws IOException If the request fails.
      */
     public List<IEXOption> optionsReferenceData(
             @NonNull String underlying,
@@ -239,7 +239,7 @@ public class Reference {
      * @see <a href="https://iexcloud.io/docs/core/REF_DATA_OPTIONS#options-reference-data">IEX Cloud API</a>
      * @param underlying List of underlying symbols of the options.
      * @return A List of Options for the given array of underlying symbols.
-     * @throws IOException
+     * @throws IOException If the request fails.
      */
     public List<IEXOption> optionsReferenceData(@NonNull String[] underlying) throws IOException {
         List<String> encodedUnderlying = new ArrayList<>(underlying.length);
@@ -266,7 +266,7 @@ public class Reference {
      * @param underlying List of underlying symbols of the options.
      * @param expirationDate The expiration date of the options.
      * @return A List of Options for the given underlying symbols with the given expiration date.
-     * @throws IOException
+     * @throws IOException If the request fails.
      */
     public List<IEXOption> optionsReferenceData(
             @NonNull String[] underlying,
