@@ -13,9 +13,9 @@ import io.github.f4pl0.reference.Reference;
  */
 public class IEXCloudClient {
     public final EquitiesMarketData equitiesMarketData;
-    public final Reference reference;
-    public final CompanyData companyData;
-    public final HistoricalData historicalData;
+    private final Reference reference;
+    private final CompanyData companyData;
+    private final HistoricalData historicalData;
 
     /**
      * Create a new IEXCloudClient.
@@ -27,6 +27,18 @@ public class IEXCloudClient {
         reference = new Reference();
         companyData = new CompanyData();
         historicalData = new HistoricalData();
+    }
+
+    public Reference fetchReferenceData() {
+        return this.reference;
+    }
+
+    public CompanyData fetchCompanyData() {
+        return this.companyData;
+    }
+
+    public HistoricalData fetchHistoricalData() {
+        return this.historicalData;
     }
 
     /**
