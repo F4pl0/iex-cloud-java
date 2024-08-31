@@ -1,6 +1,7 @@
-# iex-cloud-java
+# Deprecation
+**IEX Cloud data has ceased to exist, so this library is irrelevant, see you on the other side and farewell!**
 
-![IEX Cloud Logo](https://www.giantmachines.com/wp-content/uploads/2023/03/5e7e3da8df522d95bd159c94_IEX-Cloud-e1680079186819.png)
+# iex-cloud-java
 
 This is a Java library for interfacing with the [IEX Cloud](https://iexcloud.io/) API. It provides a convenient and straightforward way to access a wide range of financial market data, such as stock quotes, historical data, and more.
 
